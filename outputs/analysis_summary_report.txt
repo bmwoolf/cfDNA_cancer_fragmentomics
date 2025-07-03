@@ -1,0 +1,29 @@
+cfDNA Fragmentomics Batch Analysis Summary Report
+============================================================
+
+Analysis Date: 2025-07-02 16:11:48
+Total Samples Processed: 2
+Total Read Pairs Analyzed: 10,000
+
+Sample Summary:
+----------------------------------------
+Sample: normal_sample_01
+  Total Reads: 10,000
+  Valid Fragments: 5,000
+  Mean Length: 166.8 bp
+  Median Length: 167.0 bp
+  Std Dev: 47.9 bp
+
+Sample: cancer_sample_01
+  Total Reads: 10,000
+  Valid Fragments: 5,000
+  Mean Length: 146.5 bp
+  Median Length: 146.0 bp
+  Std Dev: 43.1 bp
+
+Overall Statistics:
+----------------------------------------
+Mean Fragment Length (across samples): 156.7 bp
+Median Fragment Length (across samples): 156.5 bp
+Fragment Length Range: 50 - 330 bp
+Average Filtering Rate: 50.00%

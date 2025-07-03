@@ -1,0 +1,2 @@
+total_reads_processed,filtered_read_pairs,mean_fragment_length,median_fragment_length,std_fragment_length,min_fragment_length,max_fragment_length,fragment_length_25th_percentile,fragment_length_75th_percentile
+10000,8500,167.3,165.0,45.2,50,450,135.0,195.0 

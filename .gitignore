@@ -52,13 +52,9 @@ Thumbs.db
 
 # Analysis outputs
 data/
-outputs/
 results/
 temp/
 tmp/
-*.csv
-*.tsv
-*.log
 
 # Keep sample outputs for documentation
 !outputs/sample_*.csv

@@ -1,0 +1,3 @@
+sample_name,bam_file,total_reads_processed,filtered_read_pairs,mean_fragment_length,median_fragment_length,std_fragment_length,min_fragment_length,max_fragment_length,fragment_length_25th_percentile,fragment_length_75th_percentile
+normal_sample_01,data/normal_sample_01.bam,10000,5000,166.785,167.0,47.90439619700889,50,330,133.0,199.0
+cancer_sample_01,data/cancer_sample_01.bam,10000,5000,146.5412,146.0,43.14428702111092,50,296,115.0,177.0
