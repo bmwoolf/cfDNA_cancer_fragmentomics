@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Bioinformatics data files
+*.bam
+*.bai
+*.sam
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fa
+*.fa.gz
+*.fasta
+*.fasta.gz
+*.vcf
+*.vcf.gz
+*.bcf
+*.bcf.gz
+*.bed
+*.bed.gz
+*.gtf
+*.gff
+*.gff3
+
+# Analysis outputs
+data/
+outputs/
+results/
+temp/
+tmp/
+*.csv
+*.tsv
+*.txt
+*.log
+
+# Keep sample outputs for documentation
+!outputs/sample_*.csv
+!outputs/sample_*.png
+
+# Plots and visualizations
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+!outputs/sample_*.png
+
+# Large files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test data
+test_data/
+experimental/
