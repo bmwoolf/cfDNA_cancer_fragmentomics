@@ -4,9 +4,6 @@ Batch cfDNA Fragmentomics Analysis Script
 
 This script processes multiple BAM files and generates comparative
 fragment length analysis reports for cancer research applications.
-
-Author: Bioinformatics Expert
-Date: 2024
 """
 
 import argparse
