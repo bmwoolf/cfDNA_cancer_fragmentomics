@@ -29,8 +29,8 @@ ENV/
 Thumbs.db
 
 # Bioinformatics data files
-*.bam
-*.bai
+# *.bam
+# *.bai
 *.sam
 *.fastq
 *.fastq.gz
@@ -51,7 +51,7 @@ Thumbs.db
 *.gff3
 
 # Analysis outputs
-data/
+# data/
 results/
 temp/
 tmp/
