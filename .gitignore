@@ -64,14 +64,6 @@ tmp/
 !outputs/sample_*.csv
 !outputs/sample_*.png
 
-# Plots and visualizations
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.svg
-!outputs/sample_*.png
-
 # Large files
 *.h5
 *.hdf5
