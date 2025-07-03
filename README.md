@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ```bash
 # Generate mock BAM files for testing
-python scripts/generate_test_data.py --samples 2
+python src/generate_test_data.py --samples 2
 
 # This creates 4 BAM files in the data/ directory:
 # - normal_sample_01.bam, normal_sample_02.bam
@@ -54,23 +54,23 @@ python scripts/generate_test_data.py --samples 2
 
 ```bash
 # Analyze a single BAM file
-python scripts/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam
+python src/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam
 
 # With custom output directory
-python scripts/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam --output-dir results
+python src/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam --output-dir results
 
 # Limit reads for quick testing
-python scripts/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam --max-reads 1000
+python src/parse_cfDNA_frag_lengths.py data/normal_sample_01.bam --max-reads 1000
 ```
 
 ### 4. Batch Analysis
 
 ```bash
 # Analyze all BAM files in data directory
-python scripts/batch_fragment_analysis.py "data/*.bam"
+python src/batch_fragment_analysis.py "data/*.bam"
 
 # With custom parameters
-python scripts/batch_fragment_analysis.py "data/*.bam" --max-reads 5000 --output-dir batch_results
+python src/batch_fragment_analysis.py "data/*.bam" --max-reads 5000 --output-dir batch_results
 ```
 
 ## Usage Examples
@@ -79,10 +79,10 @@ python scripts/batch_fragment_analysis.py "data/*.bam" --max-reads 5000 --output
 
 ```bash
 # Basic analysis
-python scripts/parse_cfDNA_frag_lengths.py sample.bam
+python src/parse_cfDNA_frag_lengths.py sample.bam
 
 # Advanced options
-python scripts/parse_cfDNA_frag_lengths.py sample.bam \
+python src/parse_cfDNA_frag_lengths.py sample.bam \
     --output-dir results \
     --max-reads 10000 \
     --no-plot \
@@ -93,29 +93,29 @@ python scripts/parse_cfDNA_frag_lengths.py sample.bam \
 
 ```bash
 # Process all BAM files in a directory
-python scripts/batch_fragment_analysis.py "samples/*.bam"
+python src/batch_fragment_analysis.py "samples/*.bam"
 
 # Process specific pattern
-python scripts/batch_fragment_analysis.py "cancer_samples/*.bam"
+python src/batch_fragment_analysis.py "cancer_samples/*.bam"
 
 # With read limits for testing
-python scripts/batch_fragment_analysis.py "data/*.bam" --max-reads 2000
+python src/batch_fragment_analysis.py "data/*.bam" --max-reads 2000
 ```
 
 ### Test Data Generation
 
 ```bash
 # Generate default test dataset (3 normal + 3 cancer samples)
-python scripts/generate_test_data.py
+python src/generate_test_data.py
 
 # Generate custom number of samples
-python scripts/generate_test_data.py --samples 5
+python src/generate_test_data.py --samples 5
 
 # Generate single file
-python scripts/generate_test_data.py --single my_sample.bam --type cancer
+python src/generate_test_data.py --single my_sample.bam --type cancer
 
 # Custom fragment count
-python scripts/generate_test_data.py --fragments 10000
+python src/generate_test_data.py --fragments 10000
 ```
 
 ## Output Files
@@ -249,7 +249,7 @@ if read1.reference_name not in allowed_chromosomes:
 
 ```
 cfDNA_cancer_fragmentomics/
-├── scripts/
+├── src/
 │   ├── parse_cfDNA_frag_lengths.py    # Main fragment analysis script
 │   ├── batch_fragment_analysis.py     # Batch processing for multiple samples
 │   └── generate_test_data.py          # Mock data generation for testing
