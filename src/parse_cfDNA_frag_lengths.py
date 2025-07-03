@@ -160,17 +160,9 @@ class cfDNAFragmentAnalyzer:
         
         # Calculate statistics
         if self.fragment_lengths:
-            self.stats = {
-                'total_reads_processed': total_reads,
-                'filtered_read_pairs': len(self.fragment_lengths),
-                'mean_fragment_length': float(np.mean(self.fragment_lengths)),
-                'median_fragment_length': float(np.median(self.fragment_lengths)),
-                'std_fragment_length': float(np.std(self.fragment_lengths)),
-                'min_fragment_length': int(np.min(self.fragment_lengths)),
-                'max_fragment_length': int(np.max(self.fragment_lengths)),
-                'fragment_length_25th_percentile': float(np.percentile(self.fragment_lengths, 25)),
-                'fragment_length_75th_percentile': float(np.percentile(self.fragment_lengths, 75))
-            }
+            self.stats = self.calculate_stats_from_list(self.fragment_lengths)
+            self.stats['filtered_read_pairs'] = len(self.fragment_lengths)
+            self.stats['total_reads_processed'] = total_reads
         else:
             logger.warning("No valid fragment lengths found!")
             self.stats = {}
@@ -274,6 +266,20 @@ class cfDNAFragmentAnalyzer:
         print(f"  25th Percentile: {self.stats['fragment_length_25th_percentile']:.1f} bp")
         print(f"  75th Percentile: {self.stats['fragment_length_75th_percentile']:.1f} bp")
         print("="*60)
+
+    @staticmethod
+    def calculate_stats_from_list(fragment_lengths):
+        if not fragment_lengths:
+            return {}
+        return {
+            'mean_fragment_length': float(np.mean(fragment_lengths)),
+            'median_fragment_length': float(np.median(fragment_lengths)),
+            'std_fragment_length': float(np.std(fragment_lengths)),
+            'min_fragment_length': int(np.min(fragment_lengths)),
+            'max_fragment_length': int(np.max(fragment_lengths)),
+            'fragment_length_25th_percentile': float(np.percentile(fragment_lengths, 25)),
+            'fragment_length_75th_percentile': float(np.percentile(fragment_lengths, 75))
+        }
 
 
 def main():

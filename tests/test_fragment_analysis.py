@@ -239,15 +239,10 @@ class TestcfDNAFragmentAnalyzer(unittest.TestCase):
     
     def test_statistics_calculation(self):
         """Test statistics calculation accuracy."""
-        analyzer = cfDNAFragmentAnalyzer(self.test_bam, self.temp_dir)
-        
+        from src.parse_cfDNA_frag_lengths import cfDNAFragmentAnalyzer
         # Add known fragment lengths
         test_lengths = [100, 150, 200, 250, 300]
-        analyzer.fragment_lengths = test_lengths
-        
-        # Calculate statistics
-        stats = analyzer.analyze_fragments(max_reads=5)
-        
+        stats = cfDNAFragmentAnalyzer.calculate_stats_from_list(test_lengths)
         # Check calculated values
         self.assertAlmostEqual(stats['mean_fragment_length'], 200.0, places=1)
         self.assertAlmostEqual(stats['median_fragment_length'], 200.0, places=1)
