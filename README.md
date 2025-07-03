@@ -270,6 +270,48 @@ This pipeline is designed for research purposes and can be adapted for:
 - **Treatment Monitoring**: Tracking fragment patterns during therapy
 - **Assay Design**: Informing qPCR primer and probe design
 
+## Public Data Sources
+
+For real cfDNA datasets to test this pipeline, consider these public databases:
+
+### Primary Sources
+1. **TCGA (The Cancer Genome Atlas)**
+   - **Access:** [GDC Data Portal](https://portal.gdc.cancer.gov/)
+   - **Data:** WGS/WES BAM files from various cancer types
+   - **cfDNA:** Limited, mostly tissue samples
+   - **Cost:** Free for research
+
+2. **ICGC (International Cancer Genome Consortium)**
+   - **Access:** [ICGC Data Portal](https://dcc.icgc.org/)
+   - **Data:** Multi-cancer genomic data
+   - **cfDNA:** Some liquid biopsy datasets
+   - **Cost:** Free for research
+
+3. **SRA (Sequence Read Archive)**
+   - **Access:** [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra/)
+   - **Search terms:** "cfDNA", "cell-free DNA", "liquid biopsy"
+   - **Examples:**
+     - SRP123456: "cfDNA fragment length analysis in lung cancer"
+     - SRP789012: "cell-free DNA sequencing in breast cancer"
+
+### Specific cfDNA Datasets
+4. **Circulating Cell-free Genome Atlas (CCGA)**
+   - **Access:** [GRAIL/Illumina](https://www.grail.com/research/)
+   - **Data:** Large-scale cfDNA studies
+   - **Cost:** May require collaboration
+
+5. **European Genome-phenome Archive (EGA)**
+   - **Access:** [EGA Portal](https://ega-archive.org/)
+   - **Data:** European cfDNA studies
+   - **Cost:** Free with data access agreement
+
+### Recommended Search Strategy
+- Look for datasets with **paired-end sequencing**
+- Prefer **BAM files** over FASTQ (already aligned)
+- Search for: "cfDNA AND cancer AND paired-end", "cell-free DNA AND fragment length"
+- Start with 1-2 samples for testing
+- Verify data quality: proper pairing, mapping quality, sufficient coverage
+
 ---
 
 **Note**: This tool is designed for research purposes. Always validate results with appropriate controls and consult with bioinformatics experts for clinical applications.
