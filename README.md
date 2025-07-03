@@ -1,3 +1,5 @@
+![Banner](assets/github_banner.png)
+
 # cfDNA Cancer Fragmentomics Analysis
 
 A comprehensive bioinformatics pipeline for analyzing cell-free DNA (cfDNA) fragment length distributions from BAM files, specifically designed for cancer research and amplicon size optimization in qPCR assays.
