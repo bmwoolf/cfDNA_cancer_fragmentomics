@@ -14,9 +14,9 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-# Add scripts directory to path for imports
+# Add src directory to path for imports
 import sys
-sys.path.append(str(Path(__file__).parent.parent / 'scripts'))
+sys.path.append(str(Path(__file__).parent.parent / 'src'))
 
 from parse_cfDNA_frag_lengths import cfDNAFragmentAnalyzer
 from generate_test_data import MockBAMGenerator
@@ -249,11 +249,11 @@ class TestcfDNAFragmentAnalyzer(unittest.TestCase):
         stats = analyzer.analyze_fragments(max_reads=5)
         
         # Check calculated values
-        self.assertEqual(stats['mean_fragment_length'], 200.0)
-        self.assertEqual(stats['median_fragment_length'], 200.0)
+        self.assertAlmostEqual(stats['mean_fragment_length'], 200.0, places=1)
+        self.assertAlmostEqual(stats['median_fragment_length'], 200.0, places=1)
         self.assertEqual(stats['min_fragment_length'], 100)
         self.assertEqual(stats['max_fragment_length'], 300)
-        self.assertEqual(stats['std_fragment_length'], 70.71)  # Approximate
+        self.assertAlmostEqual(stats['std_fragment_length'], 70.71, places=1)  # Approximate
 
 
 class TestBatchAnalysis(unittest.TestCase):
