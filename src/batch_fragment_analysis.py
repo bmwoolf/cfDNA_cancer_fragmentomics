@@ -269,10 +269,10 @@ def main():
         description="Batch analysis of cfDNA fragment lengths from multiple BAM files",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Examples:
-  python batch_fragment_analysis.py "data/*.bam"
-  python batch_fragment_analysis.py "samples/*.bam" --max-reads 5000 --output-dir results
-  python batch_fragment_analysis.py "*.bam" --verbose
+            Examples:
+            python batch_fragment_analysis.py "data/*.bam"
+            python batch_fragment_analysis.py "samples/*.bam" --max-reads 5000 --output-dir results
+            python batch_fragment_analysis.py "*.bam" --verbose
         """
     )
     
