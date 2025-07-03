@@ -58,7 +58,6 @@ temp/
 tmp/
 *.csv
 *.tsv
-*.txt
 *.log
 
 # Keep sample outputs for documentation
